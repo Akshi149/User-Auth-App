@@ -18,7 +18,7 @@ require("./config/passport")(passport);
 app.use("/api/users", users);
 
 // Connect to MongoDB
-const mongoURI = "mongodb+srv://userdb:poiu1234@cluster1.flbk6.mongodb.net/Userdb?retryWrites=true&w=majority";
+const mongoURI = "Paste your Mongodb URL here";
 mongoose.connect(
     mongoURI,
     { useNewUrlParser: true,

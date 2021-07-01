@@ -1,5 +1,5 @@
 module.exports = {
-    secretOrKey: "secret"
+    secretOrKey: "enter your password here"
   };
 
   
