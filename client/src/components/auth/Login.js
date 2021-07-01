@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { loginUser } from "../../actions/authActions";
 import classnames from "classnames";
-
+import log from '../../images/login.svg';
 class Login extends Component {
   constructor() {
     super();
@@ -16,7 +16,6 @@ class Login extends Component {
   }
 
   componentDidMount() {
-    // If logged in and user navigates to Login page, should redirect them to dashboard
     if (this.props.auth.isAuthenticated) {
       this.props.history.push("/dashboard");
     }
@@ -54,6 +53,8 @@ class Login extends Component {
 
     return (
       <div className="container">
+      
+      <div className="container right aligned" style={{width: '50%'}}>
         <div style={{ marginTop: "4rem" }} className="row">
           <div className="col s8 offset-s2">
             <Link to="/" className="btn-flat waves-effect">
@@ -68,7 +69,7 @@ class Login extends Component {
                 Don't have an account? <Link to="/register">Register</Link>
               </p>
             </div>
-            <form noValidate onSubmit={this.onSubmit}>
+            <form noValidate onSubmit={this.onSubmit} >
               <div className="input-field col s12">
                 <input
                   onChange={this.onChange}
@@ -106,13 +107,15 @@ class Login extends Component {
               <div className="col s12" style={{ paddingLeft: "11.250px" }}>
                 <button
                   style={{
-                    width: "150px",
+                    width: "115px",
+                    height:"40px",
+                    backgroundColor:"#F1980E",
                     borderRadius: "3px",
                     letterSpacing: "1.5px",
                     marginTop: "1rem"
                   }}
                   type="submit"
-                  className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+                  className="btn waves-effect waves-light hoverable"
                 >
                   Login
                 </button>
@@ -120,6 +123,11 @@ class Login extends Component {
             </form>
           </div>
         </div>
+      </div>
+      <div className="container left aligned" style={{width: '50%'}}>
+        <br/><br/><br/><br/><br/>
+        <img src = {log} alt = '' style={{height: 400}}/>
+      </div>
       </div>
     );
   }

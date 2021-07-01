@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { registerUser } from "../../actions/authActions";
 import classnames from "classnames";
-
+import reg from '../../images/register.svg';
 class Register extends Component {
   constructor() {
     super();
@@ -54,6 +54,8 @@ class Register extends Component {
 
     return (
       <div className="container">
+      <div className="container right aligned" style={{width: '50%'}}>
+        <br></br>
         <div className="row">
           <div className="col s8 offset-s2">
             <Link to="/" className="btn-flat waves-effect">
@@ -128,13 +130,15 @@ class Register extends Component {
               <div className="col s12" style={{ paddingLeft: "11.250px" }}>
                 <button
                   style={{
-                    width: "150px",
+                    width: "115px",
+                    height:"40px",
+                    backgroundColor:"#F1980E",
                     borderRadius: "3px",
                     letterSpacing: "1.5px",
                     marginTop: "1rem"
                   }}
                   type="submit"
-                  className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+                  className="btn waves-effect waves-light hoverable"
                 >
                   Sign up
                 </button>
@@ -142,6 +146,11 @@ class Register extends Component {
             </form>
           </div>
         </div>
+      </div>
+      <div className="container left aligned" style={{width: '50%'}}>
+      <br/><br/><br/><br/><br/><br/><br/><br/>
+        <img src ={reg} alt='' style={{height: 300}}/>
+      </div>
       </div>
     );
   }
