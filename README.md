@@ -1,6 +1,9 @@
 # User-Auth-App
 (minimal) User authentication and authorization app built with MERN stack 
 
+![2021-07-01 23-06-44](https://user-images.githubusercontent.com/69034239/124167584-cd217f80-dac1-11eb-99ea-ff87c8254f33.gif)
+
+
 # Getting started
 * Clone the repo 
 
